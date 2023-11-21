@@ -25,3 +25,12 @@ camera.position.set (0, 0, 10);
 
 // Create geometry
 const geometry = new BoxGeometry(2, 2, 2)
+
+// Create default (white) Basic material
+const material = new MeshBasicMaterial();
+
+// Create mesh
+const cube = new Mesh(geometry, material);
+
+// Add mesh to scene
+scene.add(cube);
