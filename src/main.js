@@ -34,3 +34,16 @@ const cube = new Mesh(geometry, material);
 
 // Add mesh to scene
 scene.add(cube);
+
+// Create renderer
+const renderer = new WebGLRenderer();
+renderer.setSize(container.clientWidth, container.clientHeight);
+
+// Set pixel ratio
+renderer.setPixelRatio(window.devicePixelRatio);
+
+// Add canvas to page
+container.append(renderer.domElement);
+
+// Render scene
+renderer.render(scene, camera);
