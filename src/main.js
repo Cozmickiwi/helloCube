@@ -1,12 +1,12 @@
 import {
-  BoxBufferGeometry,
+  BoxGeometry,
   Color,
   Mesh,
   MeshBasicMaterial,
   PerspectiveCamera,
   Scene,
   WebGLRenderer,
-} from 'three';
+} from '../node_modules/three/build/three.module.js';
 
 // Scene container
 const container = document.getElementById('scene-container');
@@ -22,3 +22,6 @@ const far = 100;
 
 const camera = new PerspectiveCamera(fov, aspect, near, far);
 camera.position.set (0, 0, 10);
+
+// Create geometry
+const geometry = new BoxGeometry(2, 2, 2)
